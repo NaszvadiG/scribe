@@ -7,10 +7,15 @@ class Feed extends Controller {
 		$this->load->helper('xml');
 	}
 	
+	/*
+	Currently, the index loads the RSS feed. It probably shouldn't, but I only used the RSS before.
+	The index will redirect to the RSS or ATOM feed in the future, based on the Settings.
+	Till such time, 
+	*/
 	function index() {
 		$data['encoding'] = 'utf-8';
-		$data['feed_name'] = 'Halfpant.net';
-		$data['feed_url'] = 'http://halfpant.net';
+		$data['feed_name'] = 'Halfpant.net'; // Needs change
+		$data['feed_url'] = 'http://halfpant.net'; // Needs change
 		$data['page_description'] = 'well';
 		$data['page_language'] = 'en-us';
         
@@ -19,6 +24,14 @@ class Feed extends Controller {
 		
         header("Content-Type: application/rss+xml");
         $this->load->view('feed/rss', $data);
+	}
+	
+	function atom() {
+		
+	}
+	
+	function rss() {
+		
 	}
 	
 }

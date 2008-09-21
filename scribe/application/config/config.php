@@ -11,7 +11,7 @@
 |	http://www.your-site.com/
 |
 */
-$config['base_url']	= "http://site.com/scribe/";
+$config['base_url']	= "http://localhost/scribe/";
 
 /*
 |--------------------------------------------------------------------------

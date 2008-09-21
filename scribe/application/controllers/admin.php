@@ -7,6 +7,12 @@ class Admin extends Controller {
 		$this->load->library('validation');
 	}
 	
+	/*
+	The login session currently uses cookies.
+	It is basically the Erkana authentication library made by Michael Wales (http://michaelwales.com/).
+	We definitely need something better, and much more robust. But till then, this will do.
+	*/
+	
 	function index() {
 		if (!$this->erkanaauth->try_session_login()) {
 			redirect('admin/login');
@@ -15,6 +21,7 @@ class Admin extends Controller {
 		}
 	}
 	
+	// Logging in page. site.com/admin/login.
 	function login() {
 		if (!$this->erkanaauth->try_session_login()) {
 			$rules['username'] = "required|trim|callback__check_login";
@@ -62,9 +69,17 @@ class Admin extends Controller {
 	
 	function logout() {
 		$this->erkanaauth->logout();
-		redirect('admin/login');
+		redirect('');
 	}
 	
+	/*
+	Creating a post.
+	Currently this is how it works.
+	admin/post => shows all the currently available posts.
+	admin/post/new => creates a new post.
+	admin/post/edit => 'No post mentioned. Please do not be naughty.'
+	admin/post/edit/:postid => edits that particular post.
+	*/
 	function post($type = '') {
 		if (!$this->erkanaauth->try_session_login()) {
 			redirect('admin/login');
@@ -144,6 +159,11 @@ class Admin extends Controller {
 			}
 		}
 	}
+	
+	/*
+	The thing here is that the admin file contains the new comment code, which it should NOT.
+	Other than that, it also has admin/comments for displaying all comments, and admin/comments/edit/:commentid for editing commentid.
+	*/
 	
 	function comments($type = '') {
 		if($type=='new') {
@@ -243,15 +263,24 @@ class Admin extends Controller {
 		}
 	}
 	
+	/*
+	Probably not *the* biggest issue right now, but a theme panel should have basic functionalities.
+	*/
 	function theme() {
 		
 	}
 	
+	/*
+	Followed by *the* biggest issue right now.
+	*/
 	function settings() {
 		
 		
 	}
 	
+	/*
+	Needs much work.
+	*/
 	function user() {
 		if (!$this->erkanaauth->try_session_login()) {
 			redirect('admin/login');

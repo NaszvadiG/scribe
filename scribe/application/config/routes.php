@@ -40,15 +40,18 @@
 |
 */
 
-$route['default_controller'] = "halfpant";
+/* This is the default routing, which should not be changed */
+$route['default_controller'] = "scribe";
 $route['scaffolding_trigger'] = "";
 
-$route['footprints'] = "halfpant/footprints";
-$route['footprints/:num'] = "halfpant/footprints";
 
-$route['post'] = "halfpant/post";
-$route['post/:any'] = "halfpant/post";
+/* Routing needs to be properly administration panel based.
+   Currently this is how you do it in CI
+   Currently, the route is like post/something or post/ and clearly we want more options */
+$route['post'] = "scribe/post";
+$route['post/:any'] = "scribe/post";
 
+/* This is kind of still weirdly done */
 $route['comments/new'] = "admin/comments/new";
 
 
