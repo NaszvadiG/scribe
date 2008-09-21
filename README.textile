@@ -1,0 +1,9 @@
+h2. Scribe
+
+Welcome to _Scribe_, a simple blogging application for simple blogging needs, built on "CodeIgniter":http://codeigniter.com/.
+
+We're currently still not at a release where it can be well used, so kindly bare with us.
+
+I am *Indranil*, and can be reached via email. I use gmail and my username is indranild.
+
+Thank you.
