@@ -1,0 +1,352 @@
+/*
+	CSS for admin panel
+	halfpant.net
+	(c) Dawn Studios
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a img {
+	border: none;
+}
+
+body {
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif;
+	text-align: center;
+	
+}
+
+#wrapper {
+	text-align: left;
+	width: 95%;
+	min-width: 700px;
+	margin: 0 auto;
+}
+
+
+
+/* @group Header */
+
+#header {
+	background: url(../../images/admin/bg-head.gif) repeat left top;
+	padding-bottom: 18px;
+}
+
+#header .masthead {
+	float: left;
+	padding: 20px;
+}
+
+#header h1 {
+	color: #fff;
+	font: normal 24px Georgia, "Times New Roman", Times, serif;
+	margin-bottom: 10px;
+}
+
+#header .masthead .crumbs {
+	font-size: 12px;
+	color: #eeeeee;
+}
+
+#header .masthead .crumbs a {
+	color: #ffffff;
+}
+
+#header .masthead .crumbs a:hover {
+	text-decoration: none;
+}
+
+#header .head-links {
+	float: right;
+	font-size: 11px;
+	color: #ffffff;
+	padding: 20px;
+}
+
+#header .head-links a {
+	color: #ffffff;
+	padding: 2px;
+}
+
+#header .head-links a:hover {
+	color: #373943;
+	background: #ffffff;
+}
+
+/* @end */
+
+
+
+
+/* @group Navigation */
+
+.navigation {
+	background-color: #222222;
+	height: 30px;
+	padding-top: 2px;
+	margin-bottom: 20px;
+}
+
+.navigation ul {
+	line-height: 30px;
+	list-style: none;
+	padding-left: 10px;
+	font-size: 13px;
+}
+
+.navigation ul li {
+	float: left;
+	padding-right: 2px;
+}
+
+.navigation ul li a {
+	float: left;
+	display: block;
+	line-height: 30px;
+	text-decoration: none;
+	padding: 0 10px;
+	color: #ffffff;
+}
+
+.navigation ul li a:hover {
+	background-color: #cccccc;
+	color: #222222;
+}
+
+.navigation ul li.current a {
+	background-color: #ffffff;
+	color: #222222;
+}
+
+/* @end */
+
+
+
+/* @group Content */
+
+#content {
+	padding: 0 20px;
+}
+
+.page-title {
+	font: 24px Georgia, "Times New Roman", Times, serif;
+	padding-bottom: 10px;
+}
+
+.content-form {
+	padding: 20px 0;
+}
+
+.login-form {
+	width: 40%;
+}
+
+.post-form {
+	width: 650px;
+}
+
+.content-form fieldset {
+	border: 1px solid #222222;
+	border-width: 1px 0;
+	padding: 20px;
+}
+
+.content-form legend {
+	padding: 5px;
+	font-size: 14px;
+	background: #d2d3d7;
+}
+
+.content-form p {
+	padding: 10px 0;
+	font-size: 13px;
+}
+
+.content-form p label {
+	display: block;
+	float: left;
+	width: 100px;
+	line-height: 17px;
+}
+
+.content-form p input {
+	padding: 2px;
+	font-size: 13px;
+	font-family: inherit;
+	width: 200px;
+}
+
+.content-form p textarea {
+	width: 200px;
+	padding: 2px;
+	height: 100px;
+}
+
+.content-form p button {
+	margin-left: 100px;
+	padding: 4px 8px;
+}
+
+.post-form p label {
+	font-size:10px;
+	float: none;
+}
+
+.post-form p input {
+	width: 650px;
+	font-size: 14px;
+}
+
+.post-form p textarea {
+	width: 650px;
+	height: 150px;
+}
+
+.post-form p button {
+	margin-left: 0;
+}
+
+.post-form p .del-btn a {
+	margin-left: 20px;
+	text-decoration: none;
+	border: 1px solid red;
+	width: 40px;
+	padding: 4px 8px;
+	color: #ffffff;
+	background-color: red;
+}
+
+.post-form p .del-btn a:hover {
+	color: red;
+	background-color: white;
+	border: 1px solid red;
+}
+
+#content ul.dash-links {
+	font-size: 14px;
+	list-style: none;
+	line-height: 20px;
+	padding-bottom: 20px;
+}
+
+#content ul.dash-links li {
+	padding-bottom: 5px;
+}
+
+#content ul.dash-links li a {
+	text-decoration: none;
+	color: #444444;
+	display: block;
+	width: 300px;
+	border-bottom: 1px solid #999999;
+	padding: 3px 5px;
+	line-height: 20px;
+	background-color: #eeeeee;
+}
+
+#content ul.dash-links li a:hover {
+	border-bottom: 1px solid #000000;
+	background-color: #dddddd;
+}
+
+a.spl-link {
+	font: italic 20px Georgia, "Times New Roman", Times, serif;
+	text-decoration: none;
+	color: blue;
+}
+
+a.spl-link:hover {
+	color: green;
+}
+
+#content ul.post-list {
+	list-style: none;
+	padding-bottom: 10px;
+}
+
+#content ul.post-list li {
+	padding-bottom: 10px;
+}
+
+#content ul.post-list li a {
+	text-decoration: none;
+	background: #eeeeee;
+	display: block;
+	line-height: 30px;
+	padding: 0 10px;
+	color: #000000
+}
+
+#content ul.post-list li a:hover {
+	background-color: #222222;
+	color: #ffffff;
+}
+
+#content ul.post-list li span {
+	display: block;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+}
+
+#content ul.post-list li span.post-num, #content ul.post-list li span.post-title, #content ul.post-list li span.post-view {
+	padding-right: 10px;
+}
+
+#content ul.post-list li span.post-title {
+	width: 500px;
+}
+
+#content ul.post-list li span.post-del a:hover {
+	background-color: red;
+}
+
+/* @end */
+
+
+
+/* @group Footer */
+
+#footer {
+	margin-top: 20px;
+	background: url(../../images/admin/bg-foot.gif) repeat-x left top;
+	font-size: 11px;
+	padding: 25px 20px 20px;
+}
+
+/* @end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @group Clearer */
+
+#header:after, .post-list li:after {
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	clear: both;
+	display: block;
+}
+
+#header, .post-list li {
+	min-height: 1px;
+}
+
+* html #header, * html .post-list li { height: 1%; }
+
+/* @end */
