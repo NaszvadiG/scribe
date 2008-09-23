@@ -6,6 +6,8 @@ class Post_model extends Model {
 		parent::Model();
 	}
 	
+	
+	
 	function getPosts( $num = 0, $offset = 0 ) {
 		if($num == 0 && $offset == 0) {
 			$query = $this->db->get('posts');
@@ -25,17 +27,31 @@ class Post_model extends Model {
 		
 	}
 	
+	
+	
 	function getPostById( $id ) {
 		$query = $this->db->get_where('posts', array('id' => $id));
 		
 		return $query->result();
 	}
 	
+	
+	
 	function getPostBySlug( $name ) {
 		$query = $this->db->get_where('posts', array('slug' => $slug));
 		
 		return $query->result();
 	}
+	
+	
+	
+	function getPostsByTag( $tag ) {
+		
+		/* Join posts2tag and posts database. Then select all the post fields where tag is tagid. */
+		
+	}
+	
+	
 	
 	/* Multiple posts can have the same name. So, to work around it, here's a simple thingy.
 		When inserting a new post, we check to see if a post in the db has the same slug or not.
@@ -63,6 +79,8 @@ class Post_model extends Model {
 		return $this->db->insert('posts', $data);
 					
 	}
+	
+	
 	
 	function deletePost( $id ) {
 		$this->db->where('id', $id);

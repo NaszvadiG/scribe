@@ -6,7 +6,7 @@ class Tag_model extends Model {
 		parent::Model();
 	}
 	
-	function getTagsById( $id ) {
+	function getTagById( $id ) {
 		$query = $this->db->get_where('tags', array('id' => $id));
 		
 		return $query->result();
@@ -22,6 +22,7 @@ class Tag_model extends Model {
 		return $query->result();
 	}
 	
-	/* We need to use join to select posts within a certain tag. Much simpler, I hope. :P */
+	/* We need to use join to select posts within a certain tag. Much simpler, I hope. :P
+	   Also, I think it's better, since we are after all selecting posts, to keep getPostsByTag in the post_model.php */
 	
 }
