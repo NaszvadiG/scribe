@@ -6,6 +6,25 @@ class Post_model extends Model {
 		parent::Model();
 	}
 	
+	function getPosts( $num = 0, $offset = 0 ) {
+		if($num == 0 && $offset == 0) {
+			$query = $this->db->get('posts');
+		} else {
+			if($num == 0) {
+				$query = $this->db->get('posts',0,$offset);
+			}
+			if($offset == 0) {
+				$query = $this->db->get('posts',$num);
+			}
+			if($num != 0 && $offset != 0) {
+				$query = $this->db->get('posts', $num, $offset);
+			}
+		}
+		
+		return $query->result();
+		
+	}
+	
 	function getPostById( $id ) {
 		$query = $this->db->get_where('posts', array('id' => $id));
 		
