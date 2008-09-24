@@ -47,7 +47,7 @@ class Post_model extends Model {
 	
 	function getPostsByTag( $tag ) {
 		
-		/* Join posts2tag and posts database. Then select all the post fields where tag is tagid. */
+		/* Join post2tag and posts database. Then select all the post fields where tag is tagid. */
 		
 	}
 	
@@ -72,7 +72,6 @@ class Post_model extends Model {
 					'body' => $post['body'],
 					'published' => $post['published'],
 					'date' => $post['date'],
-					'comments' => $post['comments'],
 					'slug' => $postSlug,
 					'author' => $post['author']
 				);
