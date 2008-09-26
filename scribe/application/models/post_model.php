@@ -8,7 +8,10 @@ class Post_model extends Model {
 	
 	
 	
-	function getPosts( $num = 0, $offset = 0 ) {
+	function getPosts( $num = 0, $offset = 0, $sortby = 'desc' ) {
+		
+		$this->db->order_by("date", $sortby);
+		
 		if($num == 0 && $offset == 0) {
 			$query = $this->db->get('posts');
 		} else {
