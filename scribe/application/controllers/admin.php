@@ -274,60 +274,83 @@ class Admin extends Controller {
 	Followed by *the* biggest issue right now.
 	*/
 	function settings() {
-		
-		
+		if(!$this->erkanaauth->try_session_login()) {
+			redirect('admin/login');
+		} else {
+			$rules['blog_title'] = "trim|required";
+			$rules['blog_description'] = "trim";
+			
+			
+		}
 	}
 	
 	/*
 	Needs much work.
 	*/
-	function user() {
+	function user($name) {
 		if (!$this->erkanaauth->try_session_login()) {
 			redirect('admin/login');
 		} else {
-			$rules['username'] = "trim";
-			$rules['old_pass'] = "trim|required|callback__pass_check";
-			$rules['password'] = "trim|matches[passconf]";
-			$rules['passconf'] = "trim";
-			$rules['email'] = "trim|valid_email";
-			$this->validation->set_rules($rules);
-			$fields['username'] = "username";
-			$fields['old_pass'] = "old password";
-			$fields['password'] = "new password";
-			$fields['passconf'] = "password confirmation";
-			$fields['email'] = "email";
-			$this->validation->set_fields($fields);
-			
-			if($this->validation->run()) {
-				$id = getField('id');
-				$username = $this->input->post('username');
-				$password = $this->input->post('password');
+			if($name == '') {
+			// If admin, view and edit all users, if writer, just view. mmkay?	
+				$data['users'] = $this->db->get('users');
 				
-				if($username && $username!=getField('username')) {
-					$this->db->where('id',$id);
-					$this->db->update('users',array('username'=>$username));
-				}
-				if($password) {
-					$passw = dohash($password);
-					$this->db->where('id', $id);
-					$this->db->update('users',array('password'=>$passw));
-				}
 				
-				if(!$username && !$password) {
-					$msg['message'] = "No information changed.";
-				} elseif($password && $username) {
-					$msg['message'] = "Password and username changed";
-				} elseif($password) {
-					$msg['message'] = "Password changed";
-				} elseif($username) {
-					$msg['message'] = "Username changed";
-				}
-				
-				$this->load->view('admin/user_edit', $msg);
 				
 			} else {
-				$msg['message'] = "";
-				$this->load->view('admin/user_edit', $msg);
+			// Particular user
+				if(getField('role') == 'administrator' || getField('username') == $name) {
+					
+					
+					$rules['username'] = "trim";
+					$rules['old_pass'] = "trim|required|callback__pass_check";
+					$rules['password'] = "trim|matches[passconf]";
+					$rules['passconf'] = "trim";
+					$rules['email'] = "trim|valid_email";
+					$this->validation->set_rules($rules);
+					$fields['username'] = "username";
+					$fields['old_pass'] = "old password";
+					$fields['password'] = "new password";
+					$fields['passconf'] = "password confirmation";
+					$fields['email'] = "email";
+					$this->validation->set_fields($fields);
+					
+					if($this->validation->run()) {
+						$id = getField('id');
+						$username = $this->input->post('username');
+						$password = $this->input->post('password');
+						
+						if($username && $username!=getField('username')) {
+							$this->db->where('id',$id);
+							$this->db->update('users',array('username'=>$username));
+						}
+						if($password) {
+							$passw = dohash($password);
+							$this->db->where('id', $id);
+							$this->db->update('users',array('password'=>$passw));
+						}
+						
+						if(!$username && !$password) {
+							$msg['message'] = "No information changed.";
+						} elseif($password && $username) {
+							$msg['message'] = "Password and username changed";
+						} elseif($password) {
+							$msg['message'] = "Password changed";
+						} elseif($username) {
+							$msg['message'] = "Username changed";
+						}
+						
+						$this->load->view('admin/user_edit', $msg);
+						
+					} else {
+						$msg['message'] = "";
+						$this->load->view('admin/user_edit', $msg);
+					}
+					
+					
+				} else {
+					die('no can do, sir.');
+				}
 			}
 		}
 	}
