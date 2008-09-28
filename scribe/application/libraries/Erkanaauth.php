@@ -46,7 +46,7 @@
 	 */
 	function try_session_login() {
 		if ($this->CI->session->userdata('user_id')) {
-			$query = $this->CI->db->query('SELECT COUNT(*) AS total FROM users WHERE id = ' . $this->CI->session->userdata('user_id'));
+			$query = $this->CI->db->query('SELECT COUNT(*) AS total FROM sc_users WHERE id = ' . $this->CI->session->userdata('user_id'));
 			$row = $query->row();
 			if ($row->total != 1) {
 				// Bad session - kill it

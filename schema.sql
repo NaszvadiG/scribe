@@ -1,8 +1,8 @@
 --
--- Table structure for table `comments`
+-- Table structure for table `sc_comments`
 --
 
-CREATE TABLE IF NOT EXISTS `comments` (
+CREATE TABLE IF NOT EXISTS `sc_comments` (
   `id` int(9) NOT NULL auto_increment,
   `name` varchar(250) NOT NULL,
   `email` varchar(250) NOT NULL,
@@ -18,10 +18,10 @@ CREATE TABLE IF NOT EXISTS `comments` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Table structure for table `sc_posts`
 --
 
-CREATE TABLE IF NOT EXISTS `posts` (
+CREATE TABLE IF NOT EXISTS `sc_posts` (
   `id` int(9) NOT NULL auto_increment,
   `title` text default NULL,
   `body` longtext NOT NULL,
@@ -38,10 +38,10 @@ CREATE TABLE IF NOT EXISTS `posts` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `sc_users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE IF NOT EXISTS `sc_users` (
   `id` int(9) NOT NULL auto_increment,
   `username` varchar(200) NOT NULL,
   `lastname` varchar(250),
@@ -55,10 +55,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tags`
+-- Table structure for table `sc_tags`
 --
 
-CREATE TABLE IF NOT EXISTS `tags` (
+CREATE TABLE IF NOT EXISTS `sc_tags` (
   `id` int(9) NOT NULL auto_increment,
   `name` varchar(200) NOT NULL,
   `slug` varchar(200) NOT NULL,
@@ -68,10 +68,10 @@ CREATE TABLE IF NOT EXISTS `tags` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `post2tag`
+-- Table structure for table `sc_post2tag`
 --
 
-CREATE TABLE IF NOT EXISTS `post2tag` (
+CREATE TABLE IF NOT EXISTS `sc_post2tag` (
   `postid` int(9) NOT NULL,
   `tagid` int(9) NOT NULL,
   PRIMARY KEY  (`postid`,`tagid`),

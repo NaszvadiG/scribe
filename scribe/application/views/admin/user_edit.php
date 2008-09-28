@@ -1,5 +1,5 @@
 <?php
-	$this->load->view('_includes/header');
+	$this->load->view('inc/header');
 ?>
 
 <div class="admin-form">
@@ -43,5 +43,5 @@
 <p></p>
 
 <?php
-	$this->load->view('_includes/footer');
+	$this->load->view('inc/footer');
 ?>
