@@ -1,4 +1,4 @@
-<?php $this->load->view('inc/admin_header'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 <div id="content">
 	
@@ -11,10 +11,10 @@
 		<p><label for="post_body">Body : </label>
 			<textarea name="post_body" id="post_body"></textarea>
 		</p>
-		<p><button type="submit">Post</button></p>
+		<p><button type="submit">Post</button> <a href="#">Save</a></p>
 	</fieldset>
 	</form>
 	
 </div>
 
-<?php $this->load->view('inc/admin_footer'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

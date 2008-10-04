@@ -5,11 +5,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title><?= base_url(); ?></title>
+	<title>Scribe Administration</title>
 	
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/admin/master.css" type="text/css" media="screen" />
 	
-	<?php if($this->uri->segment('2') == 'post') { ?>
+	<?php if($this->uri->segment('2') == 'post' && $this->uri->segment('3') == 'new') { ?>
 	<script language="javascript" type="text/javascript" src="<?=base_url();?>assets/js/tinymce/tiny_mce.js"></script>
 	<script language="javascript" type="text/javascript">
 	tinyMCE.init({

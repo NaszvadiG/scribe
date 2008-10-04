@@ -132,8 +132,10 @@ body {
 }
 
 .page-title {
-	font: 24px Georgia, "Times New Roman", Times, serif;
+	font: 30px Georgia, "Times New Roman", Times, serif;
 	padding-bottom: 10px;
+	margin-bottom: 15px;
+	border-bottom: 1px dotted #cccccc;
 }
 
 .content-form {
@@ -226,30 +228,29 @@ body {
 }
 
 #content ul.dash-links {
-	font-size: 14px;
+	font-size: 17px;
 	list-style: none;
-	line-height: 20px;
+	line-height: 2;
 	padding-bottom: 20px;
 }
 
 #content ul.dash-links li {
-	padding-bottom: 5px;
+	
 }
 
 #content ul.dash-links li a {
 	text-decoration: none;
 	color: #444444;
 	display: block;
-	width: 300px;
-	border-bottom: 1px solid #999999;
+	width: 30%;
+	border-bottom: 1px solid #eee;
 	padding: 3px 5px;
-	line-height: 20px;
-	background-color: #eeeeee;
+	line-height: 2;
 }
 
 #content ul.dash-links li a:hover {
-	border-bottom: 1px solid #000000;
-	background-color: #dddddd;
+	border-bottom: 1px solid #aaa;
+	background-color: #eeeeee;
 }
 
 a.spl-link {

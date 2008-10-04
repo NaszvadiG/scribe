@@ -1,6 +1,4 @@
-<?php
-	$this->load->view('inc/header');
-?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 <div class="admin-form">
 
@@ -42,6 +40,4 @@
 
 <p></p>
 
-<?php
-	$this->load->view('inc/footer');
-?>
+<?php $this->load->view('admin/inc/footer'); ?>

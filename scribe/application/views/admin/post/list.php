@@ -1,7 +1,8 @@
-<?php $this->load->view('inc/admin_header'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 <div id="content">
 	<h2 class="page-title">Posts : </h2>
+	<?php if($query->num_rows()) { ?>
 	<ul class="post-list">
 	<?php foreach($query->result() as $row) : ?>
 		<li>
@@ -12,7 +13,10 @@
 		</li>
 	<?php endforeach; ?>
 	</ul>
+	<?php } else { ?>
+		<p>No posts yet. Why not create one?</p>
+	<?php } ?>
 	<p><a class="spl-link" href="<?=base_url();?>admin/post/new">Create a new post &raquo;</a></p>
 </div>
 
-<?php $this->load->view('inc/admin_footer'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

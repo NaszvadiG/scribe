@@ -1,4 +1,4 @@
-<?php $this->load->view('inc/admin_header'); ?>
+<?php $this->load->view('admin/inc/header'); ?>
 
 <div id="content">
 	
@@ -13,4 +13,4 @@
 	
 </div><!-- /content -->
 
-<?php $this->load->view('inc/admin_footer'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>

@@ -1,5 +1,4 @@
-<?php $this->load->view('inc/admin_header'); ?>
-
+<?php $this->load->view('admin/inc/header'); ?>
 <div id="content">
 	<h2 class="page-title">Comments : </h2>
 	<ul class="comment-list">
@@ -16,4 +15,4 @@
 	</ul>
 </div>
 
-<?php $this->load->view('inc/admin_footer'); ?>
+<?php $this->load->view('admin/inc/footer'); ?>
