@@ -5,11 +5,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Halfpant</title>
+	<title>My Awesome blog</title>
 	
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/master.css" type="text/css" media="screen" />
 	
-	<link rel="alternate" type="application/rss+xml" title="Halfpant RSS Feed" href="<?=site_url("feed");?>" />
+	<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="<?=site_url("feed");?>" />
 
 	
 </head>

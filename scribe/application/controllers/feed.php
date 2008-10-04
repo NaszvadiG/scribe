@@ -14,8 +14,8 @@ class Feed extends Controller {
 	*/
 	function index() {
 		$data['encoding'] = 'utf-8';
-		$data['feed_name'] = 'Halfpant.net'; // Needs change
-		$data['feed_url'] = 'http://halfpant.net'; // Needs change
+		$data['feed_name'] = 'My Awesome Scribe blog'; // Needs change
+		$data['feed_url'] = 'http://example.com/scribe'; // Needs change
 		$data['page_description'] = 'well';
 		$data['page_language'] = 'en-us';
         
