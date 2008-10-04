@@ -10,6 +10,7 @@ class Admin extends Controller {
 				redirect('admin/login');
 			}
 		}
+		$this->load->model('admin_model');
 	}
 	
 	/*
