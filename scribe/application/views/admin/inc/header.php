@@ -37,7 +37,7 @@
 <div id="header">
 	
 	<div class="masthead">
-		<h1>Halfpant &mdash; Admin</h1>
+		<h1>Scribe &mdash; Admin</h1>
 		<p class="crumbs">
 			<a href="<?= base_url(); ?>admin">Dashboard</a>
 			<?php if($this->uri->segment('2')) { ?>
