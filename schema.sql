@@ -77,3 +77,17 @@ CREATE TABLE IF NOT EXISTS `sc_post2tag` (
   PRIMARY KEY  (`postid`,`tagid`),
   KEY `postid` (`postid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sc_settings`
+--
+
+CREATE TABLE IF NOT EXISTS `sc_settings` (
+  `settings_id` int(9) NOT NULL	auto_increment,
+  `settings_name` varchar(200) NOT NULL,
+  `settings_description` text,
+  `settings_value` varchar(200),
+  PRIMARY KEY (`settings_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
