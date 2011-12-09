@@ -9,15 +9,15 @@
 	
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/admin/master.css" type="text/css" media="screen" />
 	
-	<?php if($this->uri->segment('2') == 'post' && $this->uri->segment('3') == 'new') { ?>
+	<?php if($this->uri->segment('2') == 'post' && ($this->uri->segment('3') == 'new' || $this->uri->segment('3') == 'edit')) { ?>
 	<script language="javascript" type="text/javascript" src="<?=base_url();?>assets/js/tinymce/tiny_mce.js"></script>
 	<script language="javascript" type="text/javascript">
 	tinyMCE.init({
 		mode : "textareas",
 		theme : "advanced",
 		plugins : "safari,autosave,advimage",
-		theme_advanced_buttons1 : "fontselect,fontsizeselect,|,strikethrough,justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist,|,undo,redo",
-		theme_advanced_buttons2 : "bold,italic,underline,|,link,unlink,anchor,image,cleanup,code,|,forecolor,hr,charmap",
+		theme_advanced_buttons2 : "fontselect,fontsizeselect,|,strikethrough,justifyleft,justifycenter,justifyright,justifyfull,|,bullist,numlist,|,undo,redo",
+		theme_advanced_buttons1 : "bold,italic,underline,|,link,unlink,anchor,image,cleanup,code,|,forecolor,hr,charmap",
 		theme_advanced_buttons3 : "",
 		theme_advanced_toolbar_location : "top",
 		theme_advanced_toolbar_align : "left",

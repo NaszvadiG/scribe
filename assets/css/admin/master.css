@@ -21,7 +21,7 @@ body {
 
 #wrapper {
 	text-align: left;
-	width: 95%;
+	width: 100%;
 	min-width: 700px;
 	margin: 0 auto;
 }
@@ -32,7 +32,7 @@ body {
 
 #header {
 	background: url(../../images/admin/bg-head.gif) repeat left top;
-	padding-bottom: 18px;
+	padding: 0 2% 18px;
 }
 
 #header .masthead {
@@ -86,7 +86,7 @@ body {
 .navigation {
 	background-color: #222222;
 	height: 30px;
-	padding-top: 2px;
+	padding: 2px 2% 0;
 	margin-bottom: 20px;
 }
 
@@ -128,7 +128,7 @@ body {
 /* @group Content */
 
 #content {
-	padding: 0 20px;
+	padding: 0 2% 20px;
 }
 
 .page-title {
@@ -316,7 +316,7 @@ a.spl-link:hover {
 	margin-top: 20px;
 	background: url(../../images/admin/bg-foot.gif) repeat-x left top;
 	font-size: 11px;
-	padding: 25px 20px 20px;
+	padding: 25px 2% 20px;
 }
 
 /* @end */
